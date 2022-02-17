@@ -1,22 +1,20 @@
-import { Title, Text, Anchor } from '@mantine/core';
+import { Container, Space, Text, TextInput, Title } from '@mantine/core';
 
 export default function HomePage() {
   return (
     <>
       <Title sx={{ fontSize: 100, fontWeight: 900, letterSpacing: -2 }} align="center" mt={100}>
-        Welcome to{' '}
+        Hey min{' '}
         <Text inherit variant="gradient" component="span">
-          Mantine
+          Schatz
         </Text>
       </Title>
-      <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" mt="xl">
-        This starter Next.js projects includes a minimal setup for server side rendering, if you
-        want to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/theming/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
-      </Text>
+      <Space h={40} />
+      <Container size="xs">
+        <form method="get" action="https://www.google.com/search">
+          <TextInput name="q" size="lg" radius="md" />
+        </form>
+      </Container>
     </>
   );
 }
